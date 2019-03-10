@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1F8AA84-9F0B-4474-8512-F1E4EF6AE717}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleMorphVOXPro</RootNamespace>
+    <AssemblyName>ConsoleMorphVOXPro</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adam.cs" />
+    <Compile Include="AgentClass.cs" />
+    <Compile Include="ArrayAction.cs" />
+    <Compile Include="CaculateTimes.cs" />
+    <Compile Include="ClassPublicValue.cs" />
+    <Compile Include="Con_Network\ArrayMap.cs" />
+    <Compile Include="Con_Network\ConBN.cs" />
+    <Compile Include="Con_Network\ConFilter.cs" />
+    <Compile Include="Con_Network\ConLayer.cs" />
+    <Compile Include="Con_Network\ConLayerInputIndex.cs" />
+    <Compile Include="Con_Network\MultiCon.cs" />
+    <Compile Include="FileSave\FileSave.cs" />
+    <Compile Include="Fourier\Complex.cs" />
+    <Compile Include="Fourier\FourierTransform.cs" />
+    <Compile Include="Fourier\Tools.cs" />
+    <Compile Include="Fully_Network\BNElement.cs" />
+    <Compile Include="Fully_Network\FullyLayer.cs" />
+    <Compile Include="Fully_Network\FullyNet.cs" />
+    <Compile Include="Fully_Network\Fullyneuron.cs" />
+    <Compile Include="MultiConvolutionManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeriaLizer\BinarySeriaLizer.cs" />
+    <Compile Include="StartNet.cs" />
+    <Compile Include="WaveDeal\EndpointDetection.cs" />
+    <Compile Include="WaveDeal\Spectrogram.cs" />
+    <Compile Include="WaveDeal\Stereo .cs" />
+    <Compile Include="WaveDeal\WaveManager.cs" />
+    <Compile Include="WaveDeal\WaveMap.cs" />
+    <Compile Include="WaveDeal\WAVReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
